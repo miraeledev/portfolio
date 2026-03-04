@@ -14,15 +14,6 @@ module.exports = {
         type: Sequelize.STRING(150),
         allowNull: false,
       },
-      matricula: {
-        type: Sequelize.CHAR(5),
-        allowNull: false,
-        unique: true,
-      },
-      telefone: {
-        type: Sequelize.CHAR(11),
-        allowNull: true,
-      },
       senha: {
         type: Sequelize.STRING(255),
         allowNull: false,

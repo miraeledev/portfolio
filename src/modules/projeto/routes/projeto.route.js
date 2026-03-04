@@ -1,5 +1,5 @@
 import express from "express";
-import { ProjetoController } from "../controllers/Projeto.controller.js";
+import { ProjetoController } from "../controllers/projeto.controller.js";
 import { autenticarToken } from "../../../middleware/authMiddleware.js";
 import { autorization } from "../../../middleware/autorizationMiddleware.js";
 

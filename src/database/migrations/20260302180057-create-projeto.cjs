@@ -8,7 +8,7 @@ module.exports = {
         type: Sequelize.UUID,
         primaryKey: true,
         allowNull: false,
-        defaultValue: Sequelize.literal('gen_random_uuid()')
+        defaultValue: Sequelize.UUIDV4, // UUID gerado pelo Sequelize
       },
       nome: {
         type: Sequelize.STRING(150),
@@ -22,12 +22,12 @@ module.exports = {
         type: Sequelize.STRING(500),
         allowNull: true,
       },
-      createdAt: {
+      created_at: {                // snake_case compatível com underscored: true
         type: Sequelize.DATE,
         allowNull: false,
         defaultValue: Sequelize.fn('NOW')
       },
-      updatedAt: {
+      updated_at: {                // snake_case compatível com underscored: true
         type: Sequelize.DATE,
         allowNull: false,
         defaultValue: Sequelize.fn('NOW')

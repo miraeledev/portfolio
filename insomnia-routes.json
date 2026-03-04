@@ -5,7 +5,7 @@
   "__export_source": "insomnia.desktop.app:v2023.5.8",
   "resources": [
     {
-      "_id": "wrk_gestao_restaurante",
+      "_id": "wrk_gestao_portfolio",
       "parentId": null,
       "modified": 0,
       "created": 0,
@@ -16,7 +16,7 @@
     },
     {
       "_id": "fld_saude",
-      "parentId": "wrk_gestao_restaurante",
+      "parentId": "wrk_gestao_portfolio",
       "modified": 0,
       "created": 0,
       "name": "Saúde",
@@ -27,7 +27,7 @@
     },
     {
       "_id": "fld_usuarios",
-      "parentId": "wrk_gestao_restaurante",
+      "parentId": "wrk_gestao_portfolio",
       "modified": 0,
       "created": 0,
       "name": "Usuários",
@@ -38,7 +38,7 @@
     },
     {
       "_id": "fld_cardapio",
-      "parentId": "wrk_gestao_restaurante",
+      "parentId": "wrk_gestao_portfolio",
       "modified": 0,
       "created": 0,
       "name": "Cardápio",
@@ -49,7 +49,7 @@
     },
     {
       "_id": "fld_mesas",
-      "parentId": "wrk_gestao_restaurante",
+      "parentId": "wrk_gestao_portfolio",
       "modified": 0,
       "created": 0,
       "name": "Mesas",

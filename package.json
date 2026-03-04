@@ -1,5 +1,5 @@
 {
-  "name": "2025.11.177-uc9-gestao_restaurante",
+  "name": "2025.11.177-uc9-gestao_portfolio",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vlimap/2025.11.177-UC9-gestao_restaurante.git"
+    "url": "git+https://github.com/vlimap/2025.11.177-UC9-gestao_portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vlimap/2025.11.177-UC9-gestao_restaurante/issues"
+    "url": "https://github.com/vlimap/2025.11.177-UC9-gestao_portfolio/issues"
   },
-  "homepage": "https://github.com/vlimap/2025.11.177-UC9-gestao_restaurante#readme",
+  "homepage": "https://github.com/vlimap/2025.11.177-UC9-gestao_portfolio#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",

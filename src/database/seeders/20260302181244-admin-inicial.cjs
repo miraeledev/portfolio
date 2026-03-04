@@ -1,14 +1,16 @@
 'use strict';
+const bcrypt = require('bcrypt');
+const { randomUUID } = require('crypto');
 
 module.exports = {
   async up(queryInterface) {
+    const senhaHash = await bcrypt.hash('123456', 10);
+
     await queryInterface.bulkInsert('usuario', [{
-      id: require('crypto').randomUUID(),
-      nome: 'Administrador',
-      matricula: '00001',
-      telefone: null,
-      senha: '$2b$10$bcBRJTIGZ5pQEZXe57HLOeYoYNFwVHqzL7Ei1HUwFQabh/cZp7QiS',
-      email: 'admin@sistema.com',
+      id: randomUUID(),
+      nome: 'Admin Sistema',
+      senha: senhaHash,
+      email: 'admin@exemplo.com',
       perfil: 'admin',
       criado_em: new Date(),
       atualizado_em: new Date()
@@ -17,8 +19,7 @@ module.exports = {
 
   async down(queryInterface) {
     await queryInterface.bulkDelete('usuario', {
-      email: 'admin@sistema.com'
+      email: 'admin@exemplo.com'
     });
   }
 };
-

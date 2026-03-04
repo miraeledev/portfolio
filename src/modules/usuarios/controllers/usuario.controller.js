@@ -2,6 +2,7 @@ import { UsuarioModel } from "../models/usuario.model.js";
 import dotenv from "dotenv/config"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
+
 export class UsuarioController {
     static async listar(req, res) {
         try {
@@ -30,7 +31,7 @@ export class UsuarioController {
             res.status(500).json({ msg: "Erro interno, tente novamente mais tarde.", erro: error.message })
         }
     }
-    
+
     static async criar(req, res) {
         try {
             const { nome, email, senha, perfil } = req.body;
@@ -46,7 +47,7 @@ export class UsuarioController {
                 email,
                 senha: senhaHash,
                 perfil,
-                
+
             });
 
             res.status(201).json({ msg: 'Usuário criado com sucesso!' });
@@ -100,9 +101,11 @@ export class UsuarioController {
 
     static async login(req, res) {
         try {
+            console.log(req.body)
             const { email, senha } = req.body;
             if (!email || !senha) {
-                return res.status(400).json({ erro: "email e senha são obrigatórios" });
+                return res.
+                    status(400).json({ erro: "email e senha são obrigatórios" });
             }
             const usuario = await UsuarioModel.findOne(
                 {
@@ -111,6 +114,9 @@ export class UsuarioController {
                     }
                 }
             )
+
+            console.log("Usuário encontrado:", usuario);
+
             if (!usuario) {
                 return res.status(404).json({ erro: "Usuário não encontrado" });
             }
@@ -134,7 +140,11 @@ export class UsuarioController {
 
             return res.json({ mensagem: "Login bem-sucedido!", token });
         } catch (error) {
-            res.status(500).json({ msg: "Erro interno, tente novamente mais tarde.", erro: error.message })
+            console.log("ERRO NO LOGIN:", error);
+            res.status(500).json({
+                msg: "Erro interno, tente novamente mais tarde.",
+                erro: error.message
+            });
         }
     }
 

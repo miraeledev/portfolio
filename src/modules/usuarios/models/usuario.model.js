@@ -22,35 +22,6 @@ export const UsuarioModel = sequelize.define(
                 },
             },
         },
-        matricula: {
-            type: DataTypes.CHAR(5),
-            unique: {
-                msg: "Esta matrícula já está registrada"
-            },
-            allowNull: false,
-            validate: {
-                notEmpty: {
-                    msg: "A matrícula não pode estar vazia"
-                },
-                len: {
-                    args: [5, 5],
-                    msg: "A matrícula deve ter exatamente 5 caracteres"
-                },
-            },
-        },
-        telefone: {
-            type: DataTypes.CHAR(11),
-            allowNull: true,
-            validate: {
-                isNumeric: {
-                    msg: "O telefone deve conter apenas números"
-                },
-                len: {
-                    args: [11, 11],
-                    msg: "O telefone deve ter exatamente 11 dígitos"
-                },
-            },
-        },
         senha: {
             type: DataTypes.STRING(255),
             allowNull: false,
